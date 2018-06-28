@@ -1,0 +1,9 @@
+.idea/
+.idea_modules/
+*.iws
+/.project
+node_modules/
+out/
+build/
+dist/
+lib/

@@ -1,0 +1,29 @@
+{
+  "name": "ludolf-lang",
+  "version": "0.0.0",
+  "description": "Ludolf's programming language",
+  "main": "lib/ludolf-lang.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludolf/ludolf-lang.git"
+  },
+  "keywords": [
+    "ludolf",
+    "programming",
+    "lang"
+  ],
+  "author": "Tomas Tulka",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ludolf/ludolf-lang/issues"
+  },
+  "homepage": "https://github.com/ludolf/ludolf-lang#readme",
+  "devDependencies": {
+    "babel-eslint": "4.1.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}
