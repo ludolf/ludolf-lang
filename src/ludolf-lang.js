@@ -17,6 +17,6 @@
  * @param otherwise - to return otherwise
  */
 const $if = (condition, then, otherwise) => {
-  const cond = ('function' === typeof condition) ? condition() : cond;
+  const cond = ('function' === typeof condition) ? condition() : condition;
   return cond ? then : otherwise;
 }
