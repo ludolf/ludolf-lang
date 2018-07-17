@@ -1,22 +1,22 @@
 /**
  * Identity.
- * 
+ *
  * @param a - the parameter
- * 
- * @return `a` 
- */ 
+ *
+ * @return `a`
+ */
 const $identity = (a) => {
   return a;
 }
 
 /**
  * Equality by the value.
- * 
+ *
  * @param a - the first field
  * @param b - the second field
- * 
- * @return true if the value of `a` or result of the `a` execution is equal to the value of `b` or result of the `b` execution. 
- */ 
+ *
+ * @return true if the value of `a` or result of the `a` execution is equal to the value of `b` or result of the `b` execution.
+ */
 const $equal = (a, b) => {
   const aval = ('function' === typeof a) ? a() : a;
   const bval = ('function' === typeof b) ? b() : b;
@@ -24,6 +24,8 @@ const $equal = (a, b) => {
 }
 
 /**
+ * Condition function.
+ *
  * The else part is mandatory because the function must always return a value.
  * The value is returned as added in parameters `then` and `otherwise`.
  * 
@@ -39,11 +41,23 @@ const $equal = (a, b) => {
  * 
  * @param condition - the condition, if the condition is a function, the condition is the result of the function call
  * @param then - to return if the condition is true
- * @param otherwise - to return otherwise
- * 
+ * @param otherwise - to return otherwise*
  * @return `then` if the condition is true, otherwise `otherwise`
  */
 const $if = (condition, then, otherwise) => {
   const cond = ('function' === typeof condition) ? condition() : condition;
   return cond ? then : otherwise;
+}
+
+/**
+ * Repeat an item function.
+ *
+ * @param count - the count of repetition
+ * @param item - the item to be repeated
+ * @return an array of items in length of `count`
+ */
+const $repeat = (count, item) => {
+  const arr = [];
+  arr.length = parseInt(count);
+  return arr.fill(item);
 }
